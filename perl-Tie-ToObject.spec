@@ -10,6 +10,7 @@ Group:      Development/Perl
 Summary:    Tie to an existing object
 Url:        http://search.cpan.org/dist/%{module}
 Source:     http://www.cpan.org/modules/by-module/Tie/%{module}-%{version}.tar.gz
+BuildRequires:  perl(Test::use::ok)
 BuildArch:      noarch
 BuildRoot:      %{_tmppath}/%{name}-%{version}
 
