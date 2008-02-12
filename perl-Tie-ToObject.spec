@@ -19,7 +19,8 @@ While "tie" in perldoc allows tying to an arbitrary object, the class in
 question must support this in it's implementation of TIEHASH, TIEARRAY or
 whatever.
 
-This class provides a very tie constructor that simply returns the object it was given as it's first argument.
+This class provides a very tie constructor that simply returns the object it
+was given as it's first argument.
 
 %prep
 %setup -q -n %{module}-%{version} 
