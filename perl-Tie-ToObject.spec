@@ -1,6 +1,6 @@
 %define module   Tie-ToObject
 %define version  0.03
-%define release  %mkrel 3
+%define release  %mkrel 4
 
 Name:       perl-%{module}
 Version:    %{version}
