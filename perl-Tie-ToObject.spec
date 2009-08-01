@@ -1,18 +1,19 @@
-%define module   Tie-ToObject
-%define version  0.03
-%define release  %mkrel 4
+%define upstream_name    Tie-ToObject
+%define upstream_version 0.03
 
-Name:       perl-%{module}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+License:    GPL+ or Artistic
 Group:      Development/Perl
 Summary:    Tie to an existing object
-Url:        http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/Tie/%{module}-%{version}.tar.gz
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Tie/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires:  perl(Test::use::ok)
 BuildArch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 While "tie" in perldoc allows tying to an arbitrary object, the class in
@@ -23,7 +24,7 @@ This class provides a very tie constructor that simply returns the object it
 was given as it's first argument.
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -43,4 +44,3 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %{_mandir}/man3/*
 %{perl_vendorlib}/Tie
-
