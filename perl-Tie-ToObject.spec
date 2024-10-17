@@ -8,7 +8,7 @@ Release:	4
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Summary:	Tie to an existing object
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/Tie/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
